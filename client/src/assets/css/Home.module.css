@@ -1,0 +1,48 @@
+@import url("https://fonts.cdnfonts.com/css/avenir");
+@import url("https://fonts.cdnfonts.com/css/opticon-one");
+
+* {
+  font-family: Avenir;
+}
+
+
+
+.container {
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #ec7ab7 0%, #ec7a7a 100%);
+}
+
+.h1Text {
+  color: #fff;
+  font-size: 36px !important;
+  font-family: Avenir;
+  font-weight: 900;
+  margin-top: 30px;
+}
+
+.pText {
+  color: #fff;
+  font-size: 24px;
+  font-family: Avenir;
+}
+
+.fontAvenir {
+  font-family: Avenir;
+}
+
+.train {
+  background-color: #f2f2f2 !important;
+}
+
+.btnFindTicket {
+  background: linear-gradient(90deg, #ec7ab7 0%, #ec7a7a 100%);
+  border: none;
+  margin-top: 31px;
+}
+
+.containerFindTicket {
+  margin-top: -30px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}

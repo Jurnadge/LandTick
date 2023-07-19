@@ -1,0 +1,6 @@
+Login :
+1. pkg => jwt => jwt.go
+2. pkg => middleware => auth.go
+3. repositories => auth.go => syntax Login
+4. handlers => auth.go => syntax Login
+5. routes => auth.go => sytntax Login

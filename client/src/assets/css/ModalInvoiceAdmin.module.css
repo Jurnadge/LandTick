@@ -1,0 +1,14 @@
+.logo {
+    background: linear-gradient(90deg, #ec7ab7 0%, #ec7a7a 100%);
+    margin-left: -16px;
+    margin-top: -16px;
+    border-top-left-radius: 5px;
+    width: 175px;
+    height: 50px;
+    border-bottom-right-radius: 75%;
+  }
+  
+  .landtick {
+    font-family: "Opticon", sans-serif;
+  }
+  

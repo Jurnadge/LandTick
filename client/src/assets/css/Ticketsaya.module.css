@@ -1,0 +1,22 @@
+@import url("https://fonts.cdnfonts.com/css/opticon-one");
+
+.logo {
+    background: linear-gradient(#EC7A7A, #EC7AB7);
+    width: 16%;
+    height: 40px !important;
+    position: relative;
+    border-radius: 0 0 80px 0 ;
+    font-family: "Opticon", sans-serif;
+}
+
+.garisKebawah {
+    width: 10px;
+    height: 100px;
+}
+
+.buletAtas {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #EC7A7A;
+}
