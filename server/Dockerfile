@@ -8,7 +8,14 @@ WORKDIR /server
 COPY . /server
 
 # Build the application
-RUN go build -o main .
+RUN go get github.com/labstack/echo/v4
+RUN go get -u github.com/midtrans/midtrans-go
+RUN go get -u gorm.io/gorm
+RUN go get github.com/go-playground/validator/v10
+RUN go get -u gorm.io/gorm
+RUN go get golang.org/x/crypto/bcrypt
+RUN go get -u github.com/golang-jwt/jwt/v5
+RUN go build -v .
 
 # Expose port 8080
 EXPOSE 8080
