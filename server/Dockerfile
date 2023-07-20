@@ -1,5 +1,5 @@
 # Use the official Go image as the base image
-FROM golang:1.15
+FROM golang:1.19.2-alpine
 
 # Set the working directory in the container
 WORKDIR /server
@@ -21,4 +21,4 @@ RUN go build -v .
 EXPOSE 8080
 
 # Define the entry point for the container
-CMD ["./"]
+CMD ["go", "run", "main.go"]
