@@ -12,10 +12,7 @@ import (
 )
 
 func main() {
-	errEnv := godotenv.Load()
-	if errEnv != nil {
-		panic("Failed to load env file")
-	}
+	godotenv.Load()
 
 	e := echo.New()
 
@@ -28,7 +25,10 @@ func main() {
 	mysql.DatabaseInit()
 	database.RunMigration()
 
-	var PORT = os.Getenv("DB_PORT")
+	var PORT = os.Getenv("PORT")
+	if PORT == "" {
+		PORT = "8080"
+	}
 
 	routes.RouteInit(e.Group("/api/v1"))
 
