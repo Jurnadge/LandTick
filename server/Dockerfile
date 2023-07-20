@@ -18,7 +18,7 @@ RUN go get -u github.com/golang-jwt/jwt/v5
 RUN go build -v .
 
 # Expose port 8080
-# EXPOSE 8080
+EXPOSE 7618
 
 # Define the entry point for the container
 CMD ["go", "run", "main.go"]
