@@ -1,6 +1,7 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import logo from "../../assets/images/train-facing-right2-white.svg";
 import cssModules from "../../assets/css/Ticketsaya.module.css";
+import barcode from "../../assets/images/barcode.svg";
 import { API } from "../../config/api";
 import { useMutation, useQuery } from "react-query";
 import { Link, Navigate, useNavigate } from "react-router-dom";
@@ -42,11 +43,18 @@ export default function TicketSaya() {
               Kereta Api <br />
               <p className={`fs-6`}>{item.ticket.start_date}</p>
             </h1>
-            <p className="text-end" style={{ marginBottom: "-50px" }}>
-              qrcode
-              <p>TCK101</p>
-            </p>
           </div>
+          {item.status === "Pending" ? (
+            <p></p>
+          ) : (
+            <p
+              className="text-end"
+              style={{ marginBottom: "-140px", paddingRight:"60px" }}
+            >
+              <img src={barcode} />
+              <p className="pt-1" style={{paddingRight:"20px"}}>TCK101</p>
+            </p>
+          )}
           <Row>
             <Col xs={3}>
               <div className="ms-4">
@@ -68,13 +76,6 @@ export default function TicketSaya() {
                   </div>
                 )}
               </div>
-            </Col>
-            <Col xs={1}>
-              <div className={`${cssModules.buletAtas} mt-3`}></div>
-              <span
-                className={`${cssModules.garisKebawah} border border-1`}
-              ></span>
-              <div className={``}>a</div>
             </Col>
             <Col xs={2}>
               <p>

@@ -1,7 +1,7 @@
 import { Button, Modal, Col, Row, Container } from "react-bootstrap";
 import train from "../assets/images/train-facing-right2-white.svg";
 import barcodeKecil from "../assets/images/qr-codekecil.svg";
-import buktiTf from "../assets/images/bukti-transfer.png";
+import barcode from "../assets/images/barcode.svg";
 import cssModules from "../assets/css/ModalInvoiceAdmin.module.css";
 import { useQuery } from "react-query";
 import { API } from "../config/api";
@@ -46,12 +46,10 @@ export default function ModalInvoice({ showInvoice, showModalInvoice, id }) {
                     <p>{item.ticket.type_train}</p>
                   </Col>
                   <Col>
-                    <img src={barcodeKecil} alt="" />
-                    <p style={{ fontSize: "12px" }}>TCK0101</p>
-                  </Col>
-                  <Col>
-                    <img src={buktiTf} alt="" />
-                    <p className="ms-3">uploud payment proof</p>
+                    <p className="text-center">
+                      <img src={barcode} alt="" />
+                      <p style={{ fontSize: "12px" }}>TCK0101</p>
+                    </p>
                   </Col>
                 </Row>
                 <Row>
@@ -133,7 +131,6 @@ export default function ModalInvoice({ showInvoice, showModalInvoice, id }) {
               </Modal.Body>
             );
           })}
-
       </Modal>
     </>
   );
